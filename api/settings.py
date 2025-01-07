@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-=cldztbc4jg&xl0!x673!*v2_=p$$eu)=7*f#d0#zs$44xx-h^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app','*']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app','localhost']
 
 
 
@@ -61,7 +61,11 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',  # Add this
     'django.middleware.common.CommonMiddleware',  # Ensure it comes after
 ]
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',  # Frontend development origin
+    'https://girmantaskbackend.vercel.app',  # Production API domain (if needed)
+]
+
 
 CORS_ALLOW_CREDENTIALS = True
 
