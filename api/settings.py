@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'girman_app',
     'rest_framework',
-
+    'corsheaders',
 ]
 
 REST_FRAMEWORK = {
@@ -58,11 +58,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 
 ]
 CORS_ALLOWED_ORIGINS = [
-
-    'https://girmantaskbackend.vercel.app',  # Production API domain (if needed)
+    'https://girman-task-frontend.vercel.app',  
+    'https://girmantaskbackend.vercel.app',  
 ]
 
 
