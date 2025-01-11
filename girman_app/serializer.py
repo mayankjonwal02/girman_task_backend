@@ -4,8 +4,8 @@ from rest_framework import serializers
 class UserDataSerializer(serializers.Serializer):
     first_name = serializers.CharField(max_length=50)
     last_name = serializers.CharField(max_length=50)
-    address = serializers.CharField()
-    phone_number = serializers.CharField(max_length=15)
+    city = serializers.CharField()
+    contact_number = serializers.CharField(max_length=15)
 
     def validate_phone_number(self, value):
         if not value.isdigit():

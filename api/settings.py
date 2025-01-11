@@ -64,8 +64,10 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     'https://girman-task-frontend.vercel.app',  
     'https://girmantaskbackend.vercel.app',  
+    "http://localhost:3000",
 ]
 
+# CORS_ORIGIN_WHITELIST = ['http://localhost:3000']
 
 
 
